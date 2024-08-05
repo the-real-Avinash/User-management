@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import UserData from './components/UserData'
@@ -8,6 +9,7 @@ import LoginComponent from './components/Login';
 
   function App() {
     return (
+      <React.Fragment>
       <Router>
         <Routes>
           <Route path="/" element={<LoginComponent />} />
@@ -16,6 +18,7 @@ import LoginComponent from './components/Login';
           <Route path="/userdata" element={<UserData />} />
         </Routes>
       </Router>
+      </React.Fragment>
     )
   }
 

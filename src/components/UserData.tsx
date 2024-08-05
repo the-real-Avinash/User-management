@@ -6,9 +6,9 @@ import { fetchUserData } from '../reducers/userSlice';
 const UserData = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user.user);
-  const status = useSelector((state) => state.user.status);
-  const error = useSelector((state) => state.user.error);
+  const user = useSelector((state:any) => state.user.user);
+  const status = useSelector((state:any) => state.user.status);
+  const error = useSelector((state:any) => state.user.error);
 
   useEffect(() => {
     if (status === 'idle') {

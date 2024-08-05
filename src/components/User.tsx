@@ -1,17 +1,17 @@
-// src/components/UserComponent.js
+
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setUser } from '../reducers/userSlice'; // Make sure this path is correct
+import { useSelector } from 'react-redux';
 import "../styles/usercomponent.css";
 import { useNavigate } from 'react-router-dom';
 
 const UserComponent = () => {
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user.user);
+  const user = useSelector((state:any) => state.user.user);
   const handleRoleSwitch = () => {
     navigate("/") 
   };
   return (
+    <React.Fragment>
     <div className="user-container">
       <h2 className="user-header">User Profile</h2>
       <p className="user-message">Welcome, {user.username}! Here you can view your profile and settings.</p>
@@ -19,6 +19,7 @@ const UserComponent = () => {
         Logout {user.role === 'admin' ? 'Admin' : 'User'} Role
       </button>
     </div>
+    </React.Fragment>
   );
 };
 
