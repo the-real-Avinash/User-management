@@ -1,0 +1,26 @@
+/* src/components/AdminComponent.css */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9fafb; /* Very light gray background */
+    min-height: 100vh;
+  }
+  
+  .admin-header {
+    font-size: 2rem; /* 32px */
+    font-weight: 700; /* Bold */
+    color: #111827; /* Very dark gray text */
+    margin-bottom: 1.5rem;
+  }
+  
+  .admin-message {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400; /* Normal weight */
+    color: #374151; /* Darker gray text */
+    text-align: center;
+    max-width: 600px; /* Limit the width of the message */
+    line-height: 1.5; /* Line height for better readability */
+  }
+  
